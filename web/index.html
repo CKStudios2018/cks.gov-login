@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>{project.name} Login | CKS.GOV</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Cache-control" content="public">
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div class="login-page">
+        <div class="form">
+            <form class="register-form" action="{project.continue}">
+                <input type="text" placeholder="Name"/>
+                <input type="password" placeholder="Password"/>
+                <input type="email" placeholder="Email"/>
+                    <button>Create Account</button>
+                <p class="message">Allready Registered? <a href="#">Login</a></p>
+            </form>
+
+            <form class="login-form" action="{project.continue}">
+                <input type="text" placeholder="Email"/>
+                <input type="password" placeholder="Password"/>
+                <button>Login</button>
+                <p class="message">New Member? <a href="#">Register</a></p>
+            </form>
+        </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+        </script>
+        <script src="{project.auth}"></script>
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height: "toggle", opacity:   "toggle"}, "slow");
+            });
+        </script>
+   </body>
+</html>
